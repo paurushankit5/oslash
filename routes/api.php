@@ -47,8 +47,8 @@ Route::prefix('superadmin')->middleware(['auth:api','checkSuperAdmin'])->group(f
 
 
 
-Route::post('/register', 'App\Http\Controllers\Api\AuthController@register');
-Route::post('/login', 'App\Http\Controllers\Api\AuthController@login');
+Route::post('/register', 'App\Http\Controllers\API\AuthController@register');
+Route::post('/login', 'App\Http\Controllers\API\AuthController@login');
 Route::get('/login', function(){
         return 'Please login';
 })->name('login');
